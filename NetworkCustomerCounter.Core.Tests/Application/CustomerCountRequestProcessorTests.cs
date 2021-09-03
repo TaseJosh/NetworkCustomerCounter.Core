@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
 
-namespace NetworkCustomerCounter.Core.Tests.Processor
+namespace NetworkCustomerCounter.Core.Tests.Application
 {
     [TestFixture]
     public class CustomerCountRequestProcessorTests
