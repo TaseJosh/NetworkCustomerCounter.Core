@@ -6,19 +6,19 @@ using System;
 namespace NetworkCustomerCounterApi.Core.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class CustomerController : ControllerBase
+    [Route("api/total-customers")]
+    public class TotalCustomersController : ControllerBase
     {
         private readonly ICustomerCountRequestProcessor _processor;
 
-        public CustomerController(ICustomerCountRequestProcessor processor)
+        public TotalCustomersController(ICustomerCountRequestProcessor processor)
         {
             _processor = processor ??
                 throw new ArgumentNullException(nameof(processor));
         }
 
         [HttpPost]
-        public IActionResult GetCustomersForSelectedNode(Root request)
+        public IActionResult ProcessRequest(Root request)
         {
             var result = _processor.GetCustomersForSelectedNode(request);
 

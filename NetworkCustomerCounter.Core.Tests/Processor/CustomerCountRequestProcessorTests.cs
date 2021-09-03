@@ -2,7 +2,6 @@
 using NetworkCustomerCounter.Core.Application;
 using NetworkCustomerCounter.Core.Domain.Interfaces;
 using NetworkCustomerCounter.Core.Domain.Models;
-using NetworkCustomerCounter.Core.Infrastructure;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
@@ -14,7 +13,7 @@ namespace NetworkCustomerCounter.Core.Tests.Processor
     {
         private Mock<INetwork> _mockNetwork;
         private Mock<IRoot> _mockRequest;
-        private ICustomerCountRequestProcessor _processor;
+        private CustomerCountRequestProcessor _processor;
 
         private const string SampleRequest = @"
                     { 

@@ -17,7 +17,7 @@ namespace NetworkCustomerCounter.Core.Application
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
 
-                _network = request.Network;
+            _network = request.Network;
             return ProcessSelectedNode(request.SelectedNode);
         }
 
@@ -28,9 +28,7 @@ namespace NetworkCustomerCounter.Core.Application
             var customersForNode = nc != null ? nc.NumberOfCustomers : 0;
 
             foreach (var subNode in _network.Branches.Where(b => b.StartNode == node))
-            {
                 customersForNode += ProcessSelectedNode(subNode.EndNode);
-            }
             return customersForNode;
         }
 

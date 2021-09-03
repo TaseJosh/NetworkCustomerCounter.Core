@@ -14,9 +14,7 @@ namespace NetworkCustomerCounter.Core.Domain.Models
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (SelectedNode == 0)
-            {
                 yield return new ValidationResult("Please provide a valid selected Node,cannot be 0");
-            }
         }
     }
 }

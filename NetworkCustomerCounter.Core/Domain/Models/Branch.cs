@@ -14,13 +14,14 @@ namespace NetworkCustomerCounter.Core.Domain.Models
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (StartNode == 0)
-            { yield return new ValidationResult("Please valid Start Node values, cannot be 0"); }
+                yield return new ValidationResult("Please valid Start Node values, cannot be 0");
 
             if (EndNode == 0)
-            { yield return new ValidationResult("Please valid End Node values, cannot be 0"); }
+                yield return new ValidationResult("Please valid End Node values, cannot be 0");
         }
     }
-
-
-
 }
+
+
+
+
